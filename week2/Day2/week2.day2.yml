@@ -1,0 +1,130 @@
+
+Todays Agenda!!
+================
+   --> Recap
+   --> Methods & Objects
+   --> Break
+   --> Breakout
+   --> String
+   --> Break
+   --> Breakout
+   --> String Methods
+   
+   
+
+
+
+Method:
+
+*A method in Java is a collection of statements that perform a specific task. Methods are defined 
+within classes and are used to organize code, make it reusable, and promote modular programming.
+
+*A method typically consists of a method signature, which includes the method name, return type,
+ and parameter list, and a method body, which contains the code to be executed when the method is called.
+
+Return Type: Specifies the type of data the method will return, or "void" if it doesn't return anything.
+ Parameters: Input values passed to the method for processing.
+
+//data()-> method
+
+public static void main(String[] agrs){
+
+}
+
+//normal method
+public void data(){
+}
+
+//main method
+public  static void main(String[] args){
+
+}
+
+public -Accessmodifier 
+static - common reference
+void -return type
+main -method name
+String[] agrs- input arguments
+
+
+Accesmodifier,returntype,methodName,input arguments
+
+
+Normal method:
+
+Accesmodifier returntype methodname(input arguments){
+    
+}
+
+public void leaftaps(){
+}
+
+Example:
+public class MyClass {
+    // Method definition -> UPI
+    public void printMessage() {
+       syso("hello");
+    }
+
+    // Method with parameters and return type -> Cash 
+    public int addNumbers(int a, int b) {
+        return a + b;
+    }
+
+    public String name(String value){
+        return value;
+    }
+}
+
+
+
+
+ Object:
+
+An object in Java is an instance of a class. A class is a blueprint or a template that defines the 
+structure and behavior of objects. Objects are created based on these class definitions.
+variables ,methods
+
+Objects have attributes (fields or properties) and behaviors (methods). The attributes represent
+ the state of the object, and the methods define the actions or operations that the object can perform.
+
+syntax:
+step 1:
+ClassName objectName=new ClassName();
+
+step 2:
+
+objectName.methodName();
+
+String:
+=======
+String is class
+collection of characters
+
+String is immutable--- we cannot changeable
+two types of string declaration
+1.STRING LITERAL
+2.STRING OBJECT
+
+STRING LITERAL
+String company ="TestLeaf";
+
+STRING OBJECT:
+String company=ne String("TestLeaf");
+
+Methods:
+length()--to find 	ho many characters --int
+toCharArray()-- covert string to character array--char[]
+equals("")-- to compare String content--boolean
+equalIgnoreCase()--it ill not compare loercase or uppercase
+contins()--  compare the string ith matching content-- boolean
+CharAt()--character available in the given  position---character
+split("")--split the string based on the given value--string[]
+substring()-- to get the part of the string based on the given position--string 
+replace()-- to replace the existing character with new character--string
+replaceAll()-- to replace the existing character with new character based on the regular expression--string
+toLowerCase()-- convert the string to lowercase--string
+toUpperCase()-- convert the string to uppercase--string
+parseInt()-- convert string to integer--int
+
+
