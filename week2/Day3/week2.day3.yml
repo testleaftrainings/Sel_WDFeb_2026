@@ -1,0 +1,57 @@
+   Todays Agenda!!
+   ================
+   --> String Methods
+   --> Break
+   --> Arrays
+   --> Breakout
+
+
+
+
+
+Arryas:
+=======
+
+what is array?
+
+An array is collection of similar datatypes
+Array index start from '0'
+its fixed data 
+if you not given values to arrya .its waste and we cannot reuse
+
+ex: int[] number={2,4,5,6,7} 
+String[] data={"Java","JS","selenium"}
+
+int[] value={1,'f',"Dilip"}
+
+-------------------------------------------------------------------------------------------------------
+ Arrays:
+ An array in Java is a data structure that allows you to store multiple values of
+ the same data type under a single variable name. Arrays provide a way to efficiently
+ manage and access a collection of elements of the same type. Each element in an 
+ array is identified by an index, starting from 0 for the first element.
+
+ Example: int[] myArray = {1, 2, 3, 4, 5};
+
+array will be work on index value -start from '0'
+
+char[] data ={'a','d','g','c','e','s'}
+starting index -0
+ending index -5
+
+ store all 575 names String={"a","b","c"}
+ String[] name={"","",""}
+ String[] name={"             "}
+
+
+Classroom 1:
+Find the duplicate number in the given Arrays
+int[] input={2,5,3,1,4,5,7,6,3,2}
+
+1.Declare values
+2.get the length of the array 
+3.iterate from 0 to the array length-1 (outer loop starts here)
+4.iterate from i to the length of the array by adding 1 to it (inner loop starts here)
+5.compare both the loop variables & check they're equal
+6.print the matching value
+
