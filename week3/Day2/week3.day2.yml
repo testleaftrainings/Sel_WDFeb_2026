@@ -1,0 +1,73 @@
+Week2.day4
+- Advanced Xpath
+- Breakout
+- Break
+- Webdriver methods
+  - .getText():
+  - .getAttribute():
+  - .isDisplayed():  
+  - .isEnabled():
+  - .isdisabled(): 
+
+
+Advanced xPath(Axes based xPath)
+ 
+Parent to Child:
+ Syntax: BasicRelativeXpathforParent/childTagname 
+  Example: (//form[@id='login']/p)[2]
+ 
+Child to Parent: 
+  Syntax:  BasicRelativeXpathforChild/parent::parenttagname 
+    Example:  //label[text()='Password']/parent::p //p[@class='top']/parent::form
+ 
+GrandParent to GrandChild: 
+  Syntax: BasicRelativeXpathforGrandParent//grandchildTagname 
+    Example: (//form[@id='login']//input)[3]
+ 
+GrandChild to GrandParent: 
+  Syntax:  BasicRelativeXpathforGrandChild/ancestor::Grandparenttagname
+    Example: //input[@class='decorativeSubmit']/ancestor::form
+ 
+1)ElderCousin to YoungerCousin: 
+  Syntax: BasicRelativeXpathforElderCousin/following::youngerCousintagname
+    Example: `//span[text()='Company Name']/following::input
+ 
+2)YoungerCousin to ElderCousin: 
+  Syntax: BasicRelativeXpathforYoungerCousin/preceding::ElderCousintagname
+    Example: //input[@id='createLeadForm_firstName']/preceding::input[2]
+ 
+3)ElderSibling to YoungerSibling: 
+  Syntax: BasicRelativeXpathforElderSibling/following-sibling::youngerSiblingtagname 
+    Example: //label[text()='Username']/following-sibling::input
+ 
+4)YoungerSibling to ElderSibling: 
+  Syntax: BasicRelativeXpathforYoungerSibling/preceding-sibling::ElderSiblingtagname 
+    Example: //input[@id='username']/preceding-sibling::label
+ 
+ - Webdriver methods
+  - .getText():
+  - .getDomAttribute():
+  - .isDisplayed():  
+  - .isEnabled():
+  - .isdisabled():
+
+  1. .getText(): This method is used to retrieve the visible text of a web element. 
+     It returns the text content as a String. 
+     Example: String text = driver.findElement(By.id("example")).getText(); 
+
+  2. .getDomAttribute(): This method is used to get the value of a specific attribute of a web element. 
+     It takes the attribute name as a parameter and returns its value as a String.  
+      Example: String value = driver.findElement(By.id("example")).getDomAttribute("value");
+    Note : getAttribute() is depreciated before selenium 4.20.0. Now, we use getDomAttribute();
+    
+  3. .isDisplayed(): This method checks if a web element is present and visible on the webpage. 
+     It returns a boolean value: true if the element is displayed, false otherwise. 
+      Example: boolean visible = driver.findElement(By.id("example")).isDisplayed();
+  
+  4. .isEnabled(): This method checks if a web element is enabled (interactable) on the webpage. 
+     It returns a boolean value: true if the element is enabled, false otherwise. 
+      Example: boolean enabled = driver.findElement(By.id("example")).isEnabled();  
+
+  5. .isDisabled(): This method checks if a web element is disabled (not interactable) on the webpage. 
+     It returns a boolean value: true if the element is disabled, false otherwise. 
+      Example: boolean disabled = driver.findElement(By.id("example")).isDisabled();
