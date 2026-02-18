@@ -1,0 +1,80 @@
+week3.day3:
+
+--> Verification methods
+--> Breakout
+--> Breakout
+--> Inheritance
+--> Breakout
+
+
+###Verification Methods: 
+
+ - Webdriver methods
+  - .getText():
+  - .getDomAttribute():
+  - .isDisplayed():  
+  - .isEnabled():
+
+
+  1. .getText(): This method is used to retrieve the visible text of a web element. 
+     It returns the text content as a String. 
+     Example: String text = driver.findElement(By.id("example")).getText(); 
+
+  2. .getDomAttribute(): This method is used to get the value of a specific attribute of a web element. 
+     It takes the attribute name as a parameter and returns its value as a String.  
+      Example: String value = driver.findElement(By.id("example")).getDomAttribute("value");
+    Note : getAttribute() is depreciated before selenium 4.20.0. Now, we use getDomAttribute();
+    
+  3. .isDisplayed(): This method checks if a web element is present and visible on the webpage. 
+     It returns a boolean value: true if the element is displayed, false otherwise. 
+      Example: boolean visible = driver.findElement(By.id("example")).isDisplayed();
+  
+  4. .isEnabled(): This method checks if a web element is enabled (interactable) on the webpage. 
+     It returns a boolean value: true if the element is enabled, false otherwise. 
+      Example: boolean enabled = driver.findElement(By.id("example")).isEnabled();  
+
+
+
+--------------------------------------------------------------------------------------
+advance : JAVA 
+
+OOPS, Collection, Static, final , super , this, .
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Inheritance:
+
+class subclass-name extends superclass-name { 
+   // body of class 
+}
+
+Definition of Inheritance:
+
+Inheritance is a fundamental principle in object-oriented programming that allows a class to inherit properties and behaviors (methods) 
+from another class.
+
+This uses "extends" keyword
+
+Advantages of Inheritance:
+
+Reusability: Inheritance promotes the reuse of existing code without having to rewrite it.
+Readability: It makes the code more simple by establishing clear relationships between classes.
+Hierarchy: Establishes parent-child relationships between Classes and Interfaces, making the structure easier to understand and maintain.
+
+Types of Inheritance:
+
+Single: A class inherits from one parent class.
+Multiple: A class inherits behaviors from more than one class, typically achieved through interfaces in Java.
+Multilevel: A class inherits from a child class, creating a multilevel chain.
+Hierarchical: Multiple classes inherit from a single parent class.
+Hybrid: A combination of multilevel and hierarchical inheritance.
+
+
+Java Examples:
+
+RuntimeException extends Exception
+List extends Collection
+Selenium WebDriver Examples: - 
+ChromeDriver extends ChromiumDriver - EdgeDriver extends ChromiumDriver - ChromiumDriver extends RemoteWebDriver
+
+***********************************************************************************************************
