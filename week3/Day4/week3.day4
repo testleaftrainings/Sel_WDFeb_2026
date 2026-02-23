@@ -1,0 +1,90 @@
+Week3.day4:
+--> Polymorphism
+--> Break
+--> Breakout
+--> Wait(Implicit & Thread.Sleep();)
+
+
+Polymorphism:
+
+Definition
+
+Polymorphism in Java is a concept by which we can perform a single action in different ways.
+It is derived from two Greek words: "poly" and "morphs". "Poly" means many and "morphs" means forms.
+
+Types 
+- compile-time polymorphism 
+- runtime polymorphism. 
+
+
+Compile-time polymorphism is achieved by method overloading, while runtime polymorphism is achieved by method overriding. 
+- It allows objects of different classes to be treated as objects of a common super class for seamless interaction, typically through the use of method overriding within an inheritance hierarchy. 
+- This enables Java programs to be written more abstractly, promoting scalability and maintainability.
+
+<----------------------------------------------------------->
+Overloading: 
+
+- It refers to the ability to create multiple methods of the same name with different implementations. 
+-Calls to an overloaded method will run a specific implementation of that method appropriate to the context, based on the number and type of arguments passed.
+
+Java Examples:
+
+Methods like add() can be overloaded to accept different types of arguments.
+Similarly, substring() in the String class is overloaded to accept different starting and ending points for the substring.
+println()
+
+Selenium WebDriver Examples:
+
+The frame() method in Selenium WebDriver is overloaded to allow different types of arguments like an integer (index of the frame), a String (name or ID of the frame), or a WebElement.
+
+Advantages of Overloading:
+
+Flexibility: Allows methods to handle different data types and numbers of arguments.
+Readability: It can make the code more readable since the same method name can be used for similar actions on different types of input.
+Reduces Complexity: Developers can use the same method name to perform similar actions, which simplifies code organization and maintenance.
+Overriding
+
+<----------------------------------------------------------->
+Method overriding:-
+
+Method overriding in Java occurs when a subclass has a method with the same name, return type, and parameters as a method in its superclass.
+It's a key feature of runtime polymorphism and allows a subclass to provide a specific implementation for a method that is already provided by its parent class
+
+Examples:
+
+equals() of String class is overriden from the Object class
+toString() of String class is overriden from the Object class
+quit() of ChromiumDriver is overriden from the RemoteWebDriver Class
+
+Super Keyword :
+
+super has two general forms. The first calls the superclass’ constructor. The second is 
+used to access a member of the superclass that has been hidden by a member of a subclass.
+-----------------------------------------------------------------------------------------------------------------
+Waits:
+
+Implicit Wait (Selenium):
+
+Implicit wait tells WebDriver to wait for a certain time before throwing NoSuchElementException.
+
+It is applied globally for all element searches.
+
+Useful when elements take time to load.
+
+Once set, it remains active for the entire driver session.
+
+Syntax : driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+Thread.sleep() (Java):
+
+Thread.sleep() pauses the execution of the program for fixed milliseconds.
+
+It is a hard wait → always waits full time even if element loads earlier.
+
+Not Selenium-specific, it is a Java method.
+
+Requires handling InterruptedException.
+
+Used only when exact delay is unavoidable (generally not recommended in automation)
+
+Syntax : Thread.sleep(3000);
