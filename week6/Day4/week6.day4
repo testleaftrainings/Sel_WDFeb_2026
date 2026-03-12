@@ -1,0 +1,114 @@
+1. Cucumber
+
+Cucumber is a testing framework that supports Behavior Driven Development (BDD).
+It allows writing test cases in plain English using Gherkin language.
+It helps both technical and non-technical people understand test cases easily.
+Cucumber tests are written in feature files (.feature).
+
+2. TDD - Test Driven Development
+
+Definition: A development approach where tests are written before writing the actual code.
+
+Steps:
+
+1. Write a failing test.
+2. Write the minimum code to make it pass.
+3. Refactor the code and repeat.
+
+Goal: To ensure code quality and correctness early in development.
+
+3. ATDD - Acceptance Test Driven Development
+
+Definition: Focuses on writing acceptance tests based on customer requirements before coding.
+
+Example:
+
+* Acceptance test: “User should be able to log in with valid credentials.”
+  Developers implement code to make this test pass.
+
+4. BDD - Behavior Driven Development
+
+Definition: BDD extends TDD and ATDD. Tests are written in a natural, readable format using Given–When–Then steps.
+It focuses on system behavior rather than technical details.
+
+Example:
+Feature: Login functionality
+Scenario: Successful login with valid credentials
+Given user is on login page
+When user enters valid username and password
+Then user should be navigated to home page
+
+5. Layers of Cucumber
+
+A typical Cucumber framework has the following layers:
+
+1. Feature Layer - Contains feature files written in Gherkin.
+2. Step Definition Layer - Contains Java methods linked to Gherkin steps.
+3. Runner Layer - Executes test cases and integrates with JUnit/TestNG.
+4. Page Object Layer (optional) - Contains locators and reusable page methods.
+
+Flow: Feature File → Step Definition → Application Code
+
+6. Gherkin Keywords
+
+Feature: Describes high-level functionality.
+Scenario: Describes a single test case.
+Given: Describes preconditions.
+When: Describes user actions.
+Then: Describes expected outcomes.
+And / But: Used to connect multiple steps.
+Background: Defines common steps for all scenarios.
+Scenario Outline: Used for data-driven testing.
+Examples: Provides data for Scenario Outline.
+
+7. Scenario
+
+A Scenario represents a single test case.
+
+Example:
+Scenario: Successful login
+Given user is on login page
+When user enters valid username and password
+Then user should see the homepage
+
+8. Static Parameterization
+
+Used when fixed values are passed directly inside the step.
+
+Example:
+Scenario: Login with specific username
+Given user is on login page
+When user enters username "John"
+And user enters password "Password123"
+Then user should see the dashboard
+
+Step Definition:
+@When("user enters username {string}")
+public void enterUsername(String username) {
+driver.findElement(By.id("username")).sendKeys(username);
+}
+
+9. Scenario Outline (Dynamic Parameterization)
+
+Feature: Login functionality of LeafTaps
+
+Scenario Outline: Login with valid credentials
+Given launch the browser
+Given load the given URL
+When enter the username <uName>
+And enter the password <pWord>
+When Click on the Login button
+Then It will navigate to the next page
+
+Examples:
+|       uName      |  pWord |
+|'Demosalesmanager'|'crmsfa'|
+|'Demosalesmanager'| 'crm'  |
+
+
+Step Definition:
+@When("user enters username {string} and password {string}")
+public void enterCredentials(String uname, String pwd) {
+driver.findElement(By.id("username")).sendKeys(uname);
+driver.findElement(By.id("password")).sendKeys(pwd);
+} 
